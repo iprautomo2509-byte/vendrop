@@ -1,6 +1,6 @@
 {
   "name": "vendrop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minify and copy vendor JS dependencies to your public folder. Vite plugin, Astro compatible, and CLI included.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
