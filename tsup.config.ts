@@ -8,5 +8,6 @@ export default defineConfig({
   format: ['esm'],
   dts: true,
   clean: true,
-  minify: false
+  minify: false,
+  target: 'es2022'
 })
